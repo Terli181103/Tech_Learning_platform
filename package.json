@@ -1,0 +1,70 @@
+{
+  "name": "techguide-hub",
+  "version": "1.0.0",
+  "description": "Complete B.Tech Learning Platform for DSA, Programming, and Career Development",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --live",
+    "build": "npm run optimize",
+    "optimize": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o dist/css/style.min.css css/style.css",
+    "minify-js": "terser js/main.js js/navigation.js js/auth.js js/data-manager.js js/interactive-features.js -o dist/js/app.min.js",
+    "lint": "eslint js/*.js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse": "lighthouse http://localhost:8000 --output=html --output-path=lighthouse-report.html",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/techguide-hub.git"
+  },
+  "keywords": [
+    "education",
+    "btech",
+    "dsa",
+    "programming",
+    "career-guidance",
+    "learning-platform",
+    "algorithms",
+    "data-structures",
+    "javascript",
+    "python",
+    "web-development",
+    "ai-assistant",
+    "job-preparation",
+    "resume-builder",
+    "interview-prep"
+  ],
+  "author": {
+    "name": "TechGuide Hub Team",
+    "email": "team@techguidehub.com",
+    "url": "https://techguidehub.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/techguide-hub/issues"
+  },
+  "homepage": "https://your-username.github.io/techguide-hub",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
+    "lighthouse": "^11.4.0",
+    "prettier": "^3.1.1",
+    "serve": "^14.2.1",
+    "terser": "^5.26.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGuide Hub - B.Tech Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">TechGuide Hub</h1>
+                        <p class="text-xs text-gray-600">Complete B.Tech Learning Platform</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#dsa" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">DSA</a>
+                    <a href="#programming" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Programming</a>
+                    <a href="#careers" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Career Paths</a>
+                    <a href="#dashboard" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Dashboard</a>
+                    <a href="#ai-assistant" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">AI Assistant</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="loginBtn" class="px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">Login</button>
+                    <button id="signupBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Sign Up</button>
+                    <button class="md:hidden p-2">
+                        <i class="fas fa-bars text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6 leading-tight">
+                    Master <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Tech Skills</span> for Your B.Tech Journey
+                </h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    Complete learning platform covering DSA, Programming, Web Development, AI/ML, and Career Guidance. 
+                    Track your progress with AI-powered recommendations and land your dream job.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="startLearningBtn" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all">
+                        <i class="fas fa-rocket mr-2"></i>Start Learning Journey
+                    </button>
+                    <button id="explorePathsBtn" class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold text-lg hover:border-blue-600 hover:text-blue-600 transition-all">
+                        <i class="fas fa-map mr-2"></i>Explore Career Paths
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="py-16 bg-white/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Everything You Need to Excel</h2>
+                <p class="text-xl text-gray-600">Comprehensive learning modules designed for B.Tech students</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">DSA Mastery</h3>
+                    <p class="text-gray-600 mb-4">Complete Data Structures & Algorithms course based on Labuladong's proven methodology. Interactive coding challenges and visual explanations.</p>
+                    <button class="text-purple-600 font-semibold hover:text-purple-700">Explore DSA →</button>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Programming Fundamentals</h3>
+                    <p class="text-gray-600 mb-4">Master HTML, CSS, JavaScript, Python, and backend development. Build real projects and deploy them.</p>
+                    <button class="text-green-600 font-semibold hover:text-green-700">Start Programming →</button>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-route text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Paths</h3>
+                    <p class="text-gray-600 mb-4">Explore Data Science, AI/ML, Cybersecurity, Full Stack Development, and more. Get personalized roadmaps.</p>
+                    <button class="text-blue-600 font-semibold hover:text-blue-700">View Paths →</button>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Progress Tracking</h3>
+                    <p class="text-gray-600 mb-4">Track your learning progress, time spent, performance metrics, and get insights on your growth.</p>
+                    <button class="text-orange-600 font-semibold hover:text-orange-700">View Dashboard →</button>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Resume Builder</h3>
+                    <p class="text-gray-600 mb-4">Create professional resumes based on your skills and progress. AI-powered suggestions for improvement.</p>
+                    <button class="text-indigo-600 font-semibold hover:text-indigo-700">Build Resume →</button>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">AI Job Matching</h3>
+                    <p class="text-gray-600 mb-4">Get personalized job recommendations based on your skills, performance, and career interests. Smart matching algorithm.</p>
+                    <button class="text-pink-600 font-semibold hover:text-pink-700">Find Jobs →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-600">DSA Problems</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-green-600 mb-2">50+</div>
+                    <div class="text-gray-600">Programming Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">10+</div>
+                    <div class="text-gray-600">Career Paths</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold text-orange-600 mb-2">1000+</div>
+                    <div class="text-gray-600">Job Opportunities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Sections (Hidden by default, shown based on navigation) -->
+    <div id="contentSections" class="hidden">
+        <!-- DSA Section -->
+        <section id="dsaSection" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Data Structures & Algorithms Mastery</h2>
+                <!-- DSA content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Programming Section -->
+        <section id="programmingSection" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Programming Fundamentals</h2>
+                <!-- Programming content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Career Paths Section -->
+        <section id="careersSection" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Career Path Explorer</h2>
+                <!-- Career paths content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboardSection" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Learning Dashboard</h2>
+                <!-- Dashboard content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- AI Assistant Section -->
+        <section id="aiSection" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">AI Learning Assistant</h2>
+                <!-- AI assistant content will be loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">TechGuide Hub</h3>
+                    </div>
+                    <p class="text-gray-400">Empowering B.Tech students with comprehensive tech education and career guidance.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Learning Paths</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">DSA Fundamentals</a></li>
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="hover:text-white">AI/ML</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Programming Tutorials</a></li>
+                        <li><a href="#" class="hover:text-white">Career Guidance</a></li>
+                        <li><a href="#" class="hover:text-white">Resume Builder</a></li>
+                        <li><a href="#" class="hover:text-white">Job Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 TechGuide Hub. All rights reserved. Built for B.Tech students with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Welcome Back</h3>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">Login</button>
+            </form>
+            <button id="closeLoginModal" class="mt-4 text-gray-600 hover:text-gray-800">Close</button>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Join TechGuide Hub</h3>
+            <form id="signupForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Full Name</label>
+                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Year of Study</label>
+                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                        <option value="">Select Year</option>
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">Sign Up</button>
+            </form>
+            <button id="closeSignupModal" class="mt-4 text-gray-600 hover:text-gray-800">Close</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
